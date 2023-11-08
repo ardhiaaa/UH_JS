@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pilih</title>
+</head>
+<body>
+    <label for="jenisHewan">Nama Hewan:</label>
+    <input type="text" id="jenisHewan" oninput="pilihHewan()">
+    <p id="output"></p>
+
+    <script>
+        function pilihHewan() {
+            const inputJenisSmartphone = document.getElementById("jenisHewan").value;
+            const outputElement = document.getElementById("output");
+
+            if (inputJenisSmartphone.includes("Kucing")) {
+                outputElement.textContent = "Meong Meong";
+            } else if (inputJenisSmartphone.includes("Anjing")) {
+                outputElement.textContent = "Guk guk";
+            } else {
+                outputElement.textContent = "tidak dikenali.";
+            }
+        }
+    </script>
+</body>
+</html>

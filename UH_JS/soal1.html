@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pilih Jenis Smartphone</title>
+</head>
+<body>
+    <label for="jenisSmartphone">Masukkan jenis smartphone:</label>
+    <input type="text" id="jenisSmartphone" oninput="pilihJenisSmartphone()">
+    <p id="output"></p>
+
+    <script>
+        function pilihJenisSmartphone() {
+            const inputJenisSmartphone = document.getElementById("jenisSmartphone").value;
+            const outputElement = document.getElementById("output");
+
+            if (inputJenisSmartphone.includes("10mp")) {
+                outputElement.textContent = "Kamera";
+            } else if (inputJenisSmartphone.includes("128gb")) {
+                outputElement.textContent = "Memori";
+            } else {
+                outputElement.textContent = "Jenis smartphone tidak dikenali.";
+            }
+        }
+    </script>
+</body>
+</html>
